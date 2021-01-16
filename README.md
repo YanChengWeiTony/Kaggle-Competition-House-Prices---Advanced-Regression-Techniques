@@ -3,6 +3,10 @@
     2. xgboost == 0.90
     3. mlxtend == 0.14.0
 
+# Results
+
+Kaggle score: 0.11230 (top 3%)
+
 
 # Testing
 
