@@ -5,12 +5,15 @@
 
 
 # Testing
+
 a. run
 
     bash test.sh <train.csv>  <test.csv> <output.csv>
 
 <train.csv> : the training dataset.
+
 <test.csv> : the testing dataset.
+
 <output.csv> : the output csv file name.
 
 For example:
@@ -19,20 +22,24 @@ For example:
         
 
 # Training
+
 a. run
 
     bash train.sh  <train.csv>  <test.csv> 
 
 <train.csv> : the training dataset.
+
 <test.csv> : the testing dataset.
 
 b. description
+
 it produces the models (.sav files) inside the /src.
 
 
 
 # Src
 1. python files for submodels:
+
 a. files
 
         pred_house_pricing_8.py 
@@ -46,9 +53,13 @@ b. run:
     python3 <submodel_python_file>  <train.csv>  <test.csv>  <output_csv_file> <model_dir>
     
 <submodel_python_file> : the python file name listed in the a. files ;
+
 <train.csv> : the training dataset.
+
 <test.csv> : the testing dataset.
+
 <output_csv_file> : the output csv file name.
+
 <model_dir> :the directory path of the model it uses.
 
 for example:
@@ -56,6 +67,7 @@ for example:
     python3 src/pred_house_pricing_8.py train.csv test.csv src/submission_8.csv model/House_Pricing_8_mdl/
 
 2. python file for blending
+
 a. file
 
         house_pricing_blending_1.py
@@ -70,4 +82,5 @@ b. run
 <output_csv_file> : the output csv file name.
 
 c. description:
+
 It reads the submodel's outputs (submission_8.csv, submission_9.csv, submission_12.csv, submission_13.csv, submission_14.csv) and blend together.
